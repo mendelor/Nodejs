@@ -47,7 +47,7 @@ pipeline {
         stage('Run_Image') {
             steps {
                 script {
-                    myapp.run("--name node -p 3000:3000 mendelor/nodejs")
+                    myapp.run(" -d -p 3000:3000 mendelor/nodejs")
                 }
             }
         }
