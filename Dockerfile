@@ -20,7 +20,7 @@ RUN apt-get update \
 && apt-get clean \
 && echo 'Finished installing dependencies'
 
-COPY --from=builder ./app /app 
+COPY --from=builder ./app/modules /app/modules 
 ENV NODE_ENV production
 ENV PORT 3000
 USER node
