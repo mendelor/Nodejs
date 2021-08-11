@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:14 as builder
 
 WORKDIR "/app"
 
@@ -20,7 +20,7 @@ RUN apt-get update \
 && apt-get clean \
 && echo 'Finished installing dependencies'
 
-COPY --from=0 /app/node_modules /app/node_modules
+COPY --from=builder /app/node_modules /app/node_modules
 COPY . /app
 
 ENV NODE_ENV production
