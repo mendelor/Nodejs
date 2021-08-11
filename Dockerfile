@@ -20,7 +20,7 @@ RUN apt-get update \
 && apt-get clean \
 && echo 'Finished installing dependencies'
 
-COPY --from=builder . /app 
+COPY --from=builder ./app /app 
 COPY . /app
 
 ENV NODE_ENV production
