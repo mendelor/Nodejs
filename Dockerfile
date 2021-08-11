@@ -21,8 +21,6 @@ RUN apt-get update \
 && echo 'Finished installing dependencies'
 
 COPY --from=builder ./app /app 
-COPY . /app
-
 ENV NODE_ENV production
 ENV PORT 3000
 USER node
