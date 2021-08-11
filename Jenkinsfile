@@ -34,6 +34,7 @@ pipeline {
             steps {
 
                 sh 'npm install mocha'
+                sh 'npm install chai'
                 sh 'npm test'
             }
         }
