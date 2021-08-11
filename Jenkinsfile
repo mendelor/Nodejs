@@ -11,7 +11,7 @@ pipeline {
             steps {
                 git (
                    url: 'git@github.com:mendelor/nodejs',
-                   credentialsId: 'node_example',
+                   #credentialsId: 'node_example',
                    branch: "${branch}"
                 )
             }
