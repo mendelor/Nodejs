@@ -33,7 +33,7 @@ pipeline {
         stage('Test_Image') {
             steps {
                 sh 'node -v'
-                sh 'npm test
+                sh 'npm test'
             }
         }
         stage('Approval') {
