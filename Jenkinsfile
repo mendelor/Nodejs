@@ -33,7 +33,7 @@ pipeline {
         stage('Test_Image') {
             steps {
 
-                sh 'npm test'
+                echo 'test'
             }
         }
         stage('Approval') {
