@@ -33,7 +33,8 @@ pipeline {
         stage('Test_Image') {
             steps {
 
-                echo 'test'
+                sh 'npm install mocha'
+                sh 'npm test'
             }
         }
         stage('Approval') {
